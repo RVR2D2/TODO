@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+
+  <div class="container" id="app">
+    <div class="card">
+      <h1>{{ title }}</h1>
+      <div class="form-control">
+        <input
+          type="text"
+          :placeholder="myPlaceholder"
+          :value="inputVal"
+          @input="inputChangeVal"
+          @keypress.enter="addNewNotes"
+        >
+      </div>
+      <button class="btn" @click="addNewNotes">Добавить</button>
+      <hr>
+      <ul class="list">
+        <li class="list-item" v-for="(note, idx) of notes"> {{ idx + 1 }}. {{ note }}
+          <button class="btn danger" @click="notesDel(idx)">Удалить</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+  </body>
+</html>
