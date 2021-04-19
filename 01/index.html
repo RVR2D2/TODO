@@ -15,8 +15,7 @@
         <input
           type="text"
           :placeholder="myPlaceholder"
-          :value="inputVal"
-          @input="inputChangeVal"
+          v-model="inputVal"
           @keypress.enter="addNewNotes"
         >
       </div>

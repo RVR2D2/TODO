@@ -8,9 +8,6 @@ const App = {
         }
     },
     methods: {
-        inputChangeVal(e) {
-            this.inputVal = e.target.value
-        },
         addNewNotes() {
             if (this.inputVal !== '') {
                 this.notes.push(this.inputVal)
