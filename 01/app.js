@@ -17,9 +17,6 @@ const App = {
                 this.inputVal = ''
             }
         },
-        doubleCount() {
-            return this.notes.length * 2
-        },
         toUpperCase(i) {
             return i.toUpperCase()
         },
@@ -31,6 +28,13 @@ const App = {
         doubleCountComputed() {
             console.log('doubleCountComputed')
             return this.notes.length * 2
+        }
+    },
+    watch: {
+        inputVal(value) {
+            if (value.length > 10) {
+                this.inputVal = ''
+            }
         }
     }
 }
