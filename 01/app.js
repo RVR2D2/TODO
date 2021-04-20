@@ -23,7 +23,6 @@ const App = {
     },
     computed: {
         doubleCountComputed() {
-            console.log('doubleCountComputed')
             return this.notes.length * 2
         }
     },
